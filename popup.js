@@ -12,6 +12,18 @@ document.getElementById('defaultFont').addEventListener('click', function() {
   document.getElementById('dyslexicGlasses').addEventListener('click', function() {
     changeFont('DyslexiaGlasses-Regular');
   });
+  document.getElementById('increaseFont').addEventListener('click', function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, {action: "changeFontSize", adjustment: "increase"});
+      });
+  });
+
+  document.getElementById('decreaseFont').addEventListener('click', function() {
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+          chrome.tabs.sendMessage(tabs[0].id, {action: "changeFontSize", adjustment: "decrease"});
+      });
+  });
+
   
   function changeFont(fontName) {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
@@ -24,5 +36,16 @@ document.getElementById('defaultFont').addEventListener('click', function() {
       });
     });
   }
-  
+  document.getElementById('darkerFont').addEventListener('click', function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, {action: "changeFontColor", adjustment: "darker"});
+      });
+  });
+
+  document.getElementById('lighterFont').addEventListener('click', function() {
+      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+          chrome.tabs.sendMessage(tabs[0].id, {action: "changeFontColor", adjustment: "lighter"});
+      });
+  });
+
   
