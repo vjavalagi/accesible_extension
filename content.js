@@ -42,7 +42,7 @@ const applyFont = (fontName) => {
 // Function to adjust font size
 let currentFontSize = 100; // Default font size in percent
 const adjustFontSize = (adjustment) => {
-    const adjustmentAmount = 5; // Adjust font size by 5% for subtler changes
+    const adjustmentAmount = 2; // Adjust font size by 5% for subtler changes
     if (adjustment === "increase") {
         currentFontSize += adjustmentAmount;
     } else if (adjustment === "decrease") {
