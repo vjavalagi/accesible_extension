@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'OpenDyslexic3-Regular';
+    src: url('/fonts/OpenDyslexic3-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic3-Bold';
+    src: url('/fonts/OpenDyslexic3-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DyslexiaGlasses-Regular';
+    src: url('/fonts/Dyslexiaglasses-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
