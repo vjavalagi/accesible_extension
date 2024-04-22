@@ -1,13 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Font Switcher</title>
+  <style>
+    @font-face {
+    font-family: 'OpenDyslexic3-Regular';
+    src: url('/fonts/OpenDyslexic3-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'OpenDyslexic3-Bold';
+        src: url('/fonts/OpenDyslexic3-Bold.ttf') format('truetype');
+        font-weight: bold;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'DyslexiaGlasses-Regular';
+        src: url('/fonts/Dyslexiaglasses-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    body {
+      font-family: 'Georgia', serif; /* Default font */
+      background-color: #f4f4f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .button-container {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+    }
+    button {
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px 0;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #5271ff;
+      color: white;
+      transition: background-color 0.3s;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #4056d6;
+    }
+
+    /* Specific font styles for each button */
+    #defaultFont {
+      font-family: 'Georgia', serif;
+    }
+    #openDyslexic {
+      font-family: 'OpenDyslexic3-Regular', sans-serif;
+    }
+    #openDyslexicBold {
+      font-family: 'OpenDyslexic3-Bold', sans-serif;
+    }
+    #dyslexicGlasses {
+      font-family: 'DyslexiaGlasses-Regular', sans-serif; /* Placeholder for demonstration */
+    }
+  </style>
 </head>
 <body>
-  <button id="defaultFont">Default Font</button>
-  <button id="openDyslexic">OpenDyslexic Regular</button>
-  <button id="openDyslexicBold">OpenDyslexic Bold</button>
-  <button id="dyslexicGlasses">Dyslexia Glasses</button>
+  <div class="button-container">
+    <button id="defaultFont">Default Font</button>
+    <button id="openDyslexic">OpenDyslexic Regular</button>
+    <button id="openDyslexicBold">OpenDyslexic Bold</button>
+    <button id="dyslexicGlasses">Dyslexia Glasses</button>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html>
